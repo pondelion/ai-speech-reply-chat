@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "ai-speech-reply-chat"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{include = "ai_speech_reply_chat"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+transformers = {version = "4.3", extras = ["torch"]}
+fugashi = {extras = ["unidic-lite"], version = "^1.2.0"}
+ipadic = "^1.0.0"
+pyopenjtalk = "^0.3.0"
+librosa = "0.8.0"
+pysoundfile = "0.9.0.post1"
+gdown = "^4.5.3"
+sentencepiece = "^0.1.97"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

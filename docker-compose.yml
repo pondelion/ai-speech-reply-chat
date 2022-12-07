@@ -1,0 +1,20 @@
+version: "2.4"
+services:
+  ai_speech_reply_chat:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # restart: always
+    tty: true
+    expose:
+      - "8000"
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./tacotron2:/tacotron2
+      - ./ai_speech_reply_chat:/ai_speech_reply_chat
+      - ./tests:/tests
+      - ./models:/models
+      - ./scripts:/scripts
+      - ./outputs:/outputs
+    runtime: nvidia
